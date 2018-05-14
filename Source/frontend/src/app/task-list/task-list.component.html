@@ -1,0 +1,38 @@
+<div class="container" style="margin-top:200px;">
+
+
+  <div class="content container-fluid">
+    <table class="table table-striped">
+      <thead style="line-height:30px;">
+      <th scope="col" style="width:200px;">Task &nbsp;<span class="glyphicon glyphicon-pushpin"></span></th>
+      <th scope="col" style="width:200px;">Priority</th>
+      <th scope="col" style="width:200px;">Status</th>      
+      
+      <th scope="col" style="width:200px;">Manage</th>
+      </thead>
+
+      <tbody>
+      <tr *ngFor="let task of tasks">
+        <td scope="row" style="cursor:pointer;">{{task.title}}</td>
+        <td scope="row">{{task.priority}}</td>
+        <td scope="row">{{task.status}}</td>
+        
+        
+        <td>
+          <span class="glyphicon glyphicon-pencil" (click)="loadTask(task.id)" style="color:orange;cursor:pointer;"></span>&nbsp;
+          <span class="glyphicon glyphicon-remove" (click)="deleteTask(task.id)" style="color:red;cursor:pointer;"></span>
+
+        </td>
+      </tr>
+      </tbody>
+    </table>
+      <button class="button">Add Task</button>
+  </div>
+
+
+</div>
+
+
+
+
+
